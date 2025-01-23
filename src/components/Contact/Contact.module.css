@@ -1,0 +1,226 @@
+@import "../../vars.css";
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-title);
+    font-family: var(--font-poppins);
+    padding-top: 10px;
+}
+
+.contactHead {
+    font-weight: 100;
+    color: var(--color-box-bg);
+    font-size: 50px;
+}
+
+.contactHeadLine {
+    border: none;
+    height: 5px;
+    background-color: var(--color-box-bg);
+    width: 13%;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 30px 20px;
+}
+
+.contactStatement {
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--color-box-bg);
+    text-align: center;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactOption {
+    padding: 10px;
+    transition: transform 0.5s ease;
+}
+
+.contactOption a {
+    display: flex;
+    text-decoration: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-text);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactOption:hover {
+    transform: scale(1.05);
+}
+
+.contactIcon {
+    width: 10%;
+    height: 10%;
+    background-color: var(--color-box-bg);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactLink {
+    color: var(--color-box-bg)
+}
+
+.contactFooter {
+    color: var(--color-box-bg);
+}
+
+@media screen and (max-width: 1000px) {
+    .contactHead {
+        font-weight: 100;
+        color: var(--color-box-bg);
+        font-size: 40px;
+    }
+    
+    .contactHeadLine {
+        border: none;
+        height: 4px;
+        background-color: var(--color-box-bg);
+        width: 38%;
+        border-radius: 3px;
+    }
+
+    .contactSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contactStatement {
+        font-weight: 400;
+        font-size: 40px;
+        color: var(--color-box-bg);
+        text-align: center;
+    }
+
+    .contactOption {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contactOption a {
+        display: flex;
+        text-decoration: none;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .contactIcon {
+        width: 18%;
+        height: 18%;
+    }
+
+    .contactLink {
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .contactFooter {
+        margin-top: 20px;
+        color: var(--color-box-bg);
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 2300px) {
+    .contactHead {
+        font-size: 75px;
+    }
+    
+    .contactHeadLine {
+        height: 6px;
+        width: 12%;
+        border-radius: 3px;
+    }
+
+    .contactList {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        list-style: none;
+        margin: 0;
+    }
+
+    .contactStatement {
+        font-size: 97px;
+    }
+
+    .contactSection {
+        padding: 20px 40px 30px 20px;
+        gap: 40px;
+        width: 85%;
+    }
+
+    .contactOption a {
+        background-color: var(--color-text);
+        padding: 10px 35px 10px 10px;
+        border-radius: 10px;
+    }
+
+    .contactFooter {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 2301px) {
+    .contactHead {
+        font-size: 100px;
+    }
+    
+    .contactHeadLine {
+        height: 6px;
+        width: 12%;
+        border-radius: 3px;
+    }
+
+    .contactList {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contactStatement {
+        font-size: 110px;
+    }
+
+    .contactSection {
+        padding: 20px 20px 30px 20px;
+        gap: 40px;
+        width: 70%;
+    }
+
+    .contactFooter {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+}
