@@ -1,41 +1,15 @@
 import styles from "./About.module.css";
-import { useEffect, useState } from "react";
-import { getImageUrl } from "../../utils";
+import {getImageUrl} from "../../utils";
 
 export const About = () => {
-    const [animate, setAnimate] = useState(false); // State to control animation
-
-    useEffect(() => {
-        const checkFontsLoaded = async () => {
-            // Wait for Google Fonts to be fully loaded
-            await document.fonts.load("1em var(--font-poppins)");
-
-            // Ensure all resources are loaded and ready
-            window.onload = () => {
-                setTimeout(() => {
-                    setAnimate(true); // Trigger the animation after everything is ready
-                }, 1000);
-            };
-        };
-
-        checkFontsLoaded();
-    }, []);
 
     return (
         <section className={styles.aboutSection}>
             <img className={styles.image} src={getImageUrl('About/Me_and_Ollie.jpg')} alt='Braeden_Picture'/>
             <div className={styles.about}>
-                {/* Dynamically add animation class based on state */}
-                <h1 className={`${styles.aboutTitle} ${animate ? styles.typingEffect : ""}`}>
-                    Hey! I'm Braeden
-                </h1>
+                <h1 className={styles.aboutTitle}>Hey! I'm Braeden</h1>
                 <hr className={styles.aboutLine}/>
-                <p className={styles.aboutDescription}>
-                    Born and raised in Colorado, I'm now a first-year computer science student at the 
-                    <strong> University of Massachusetts—Amherst</strong>. I love programming and enjoy using it as a 
-                    creative medium for my other interests. When I'm not programming, you'll probably catch me cooking, 
-                    playing poker, juggling a soccer ball, or exploring the outdoors!
-                </p>
+                <p className={styles.aboutDescription}>Born and raised in Colorado, I'm now a first year computer science student at the <strong>University of Massachusetts—Amherst</strong>. I love programming and enjoy using it as a creative medium for my other interests. When I'm not programming, you'll probably catch me cooking, playing poker, juggling a soccer ball, or exploring the outdoors!</p>
                 <ul className={styles.iconBar}>
                     <li className={styles.icons}>
                         <a href="https://github.com/BraedenTurner22" target="_blank" rel="noopener noreferrer">
@@ -50,5 +24,6 @@ export const About = () => {
                 </ul>
             </div>
         </section>
+        
     );
 };

@@ -159,14 +159,11 @@
         font-family: var(--font-poppins);
         font-size: 27px;
         font-weight: 600;
-        border-right: 2px solid var(--color-title);
+        border-right: none;
         white-space: nowrap;
         display: inline-block;
         overflow: hidden;
-        animation: 
-            typing 3s steps(22, end) forwards, /* Typing animation */
-            blink 1s step-end 3s 3,     /* Cursor blinks indefinitely */
-            disappear 0s forwards 6s;
+        animation: none;
     }
     
     .aboutLine {
