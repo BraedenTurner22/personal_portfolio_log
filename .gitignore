@@ -21,11 +21,11 @@ node_modules
 *.sln
 *.sw?
 
-# # Images
-# public
+# Images
+public
 
-# # Source Code
-# src
+# Source Code
+src
 
-# #API
-# server.js
+#API
+server.js
