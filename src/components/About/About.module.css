@@ -35,6 +35,31 @@
     border-radius: 8px;
 }
 
+@keyframes typing {
+    from {
+        width: 0; /* Start with no text visible */
+    }
+    to {
+        width: 13.4ch; /* Full text visible */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Cursor disappears */
+    }
+    100% {
+        border-color: var(--color-text); /* Cursor reappears */
+    }
+}
+
+/* This is for when the cursor disappears after blinking */
+@keyframes disappear {
+    to {
+        border-right: none; /* Remove cursor */
+    }
+}
+
 .aboutTitle {
     color: var(--color-title);
     font-family: var(--font-poppins);
@@ -44,30 +69,11 @@
     white-space: nowrap;
     display: inline-block;
     overflow: hidden;
-}
-
-/* Add a separate class for the typing animation */
-.typingEffect {
     animation: 
-        typing 3s steps(22, end) forwards, 
-        blink 1s step-end 3s 3, 
+        typing 3s steps(22, end) forwards, /* Typing animation */
+        blink 1s step-end 3s 3,     /* Cursor blinks indefinitely */
         disappear 0s forwards 6s;
 }
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 13.4ch; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-    100% { border-color: var(--color-text); }
-}
-
-@keyframes disappear {
-    to { border-right: none; }
-}
-
 
 .aboutLine {
     border: none;
@@ -157,6 +163,10 @@
         white-space: nowrap;
         display: inline-block;
         overflow: hidden;
+        animation: 
+            typing 3s steps(22, end) forwards, /* Typing animation */
+            blink 1s step-end 3s 3,     /* Cursor blinks indefinitely */
+            disappear 0s forwards 6s;
     }
     
     .aboutLine {

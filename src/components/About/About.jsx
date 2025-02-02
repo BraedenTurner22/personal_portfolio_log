@@ -6,8 +6,19 @@ export const About = () => {
     const [animate, setAnimate] = useState(false); // State to control animation
 
     useEffect(() => {
-        // Ensure animations trigger only after the whole component is loaded
-        setAnimate(true);
+        const checkFontsLoaded = async () => {
+            // Wait for Google Fonts to be fully loaded
+            await document.fonts.load("1em var(--font-poppins)");
+
+            // Ensure all resources are loaded and ready
+            window.onload = () => {
+                setTimeout(() => {
+                    setAnimate(true); // Trigger the animation after everything is ready
+                }, 1000);
+            };
+        };
+
+        checkFontsLoaded();
     }, []);
 
     return (

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins.woff2') format('woff2'),
+         url('/fonts/Poppins.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Ensures text appears even if the font is still loading */
+}
+
 :root {
     /* Colors */
     --color-text: #bf6423;
