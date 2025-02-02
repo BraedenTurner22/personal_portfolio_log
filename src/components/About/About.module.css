@@ -157,10 +157,6 @@
         white-space: nowrap;
         display: inline-block;
         overflow: hidden;
-        animation: 
-            typing 3s steps(22, end) forwards, /* Typing animation */
-            blink 1s step-end 3s 3,     /* Cursor blinks indefinitely */
-            disappear 0s forwards 6s;
     }
     
     .aboutLine {
