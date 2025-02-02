@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import {getImageUrl} from "../../utils";
 
 export const About = () => {
+    const titleRef = useRef(null); // Create a reference to the title
 
     useEffect(() => {
         const handleLoad = () => {
