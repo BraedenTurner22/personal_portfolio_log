@@ -28,7 +28,7 @@ export const About = () => {
         <section className={styles.aboutSection}>
             <img className={styles.image} src={getImageUrl('About/Me_and_Ollie.jpg')} alt='Braeden_Picture'/>
             <div className={styles.about}>
-                <h1 className={styles.aboutTitle}>Hey! I'm Braeden</h1>
+                <h1 ref={titleRef} className={styles.aboutTitle}>Hey! I'm Braeden</h1>
                 <hr className={styles.aboutLine}/>
                 <p className={styles.aboutDescription}>Born and raised in Colorado, I'm now a first year computer science student at the <strong>University of Massachusetts—Amherst</strong>. I love programming and enjoy using it as a creative medium for my other interests. When I'm not programming, you'll probably catch me cooking, playing poker, juggling a soccer ball, or exploring the outdoors!</p>
                 <ul className={styles.iconBar}>
