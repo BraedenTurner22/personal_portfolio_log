@@ -1,0 +1,15 @@
+:root {
+    /* Colors */
+    --color-text: #bf6423;
+    --color-title: #9c3927;
+    --color-border: #bc410c;
+    --color-box-bg: #f3dece;
+    --color-light-bg: #f9f0ea;
+    --color-bg: #fff8f3f6;
+
+    /* Fonts */
+    --font-poppins: 'Poppins', sans-serif;
+
+    /* Scroll Behavior */
+    scroll-behavior: smooth;
+}
